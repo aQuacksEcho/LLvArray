@@ -49,6 +49,8 @@ int main()
     std::chrono::duration<double> lHalfEraseT;
     std::chrono::duration<double> lThreeQuarterEraseT;
 
+    std::chrono::duration<double> differenceT;
+
     int vHalfPoint;
     int vQuarterPoint;
     int vThreeQuarterPoint;
@@ -193,11 +195,15 @@ int main()
 
     if(vFrontPopT.count() < lFrontPopT.count())
     {
-        std::cout << "Vector is faster.\n";
+        std::cout << "Vector is faster, by ";
+        differenceT = lFrontPopT - vFrontPopT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
     else
     {
-        std::cout << "List is faster.\n";
+        std::cout << "List is faster, by ";
+        differenceT = vFrontPopT - lFrontPopT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
 
     //Removal from Back:
@@ -209,11 +215,15 @@ int main()
 
     if(vBackPopT.count() < lBackPopT.count())
     {
-        std::cout << "Vector is faster.\n";
+        std::cout << "Vector is faster, by ";
+        differenceT = lBackPopT - vBackPopT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
     else
     {
-        std::cout << "List is faster.\n";
+        std::cout << "List is faster, by ";
+        differenceT = vBackPopT - lBackPopT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
 
     //Removal from Center:
@@ -225,11 +235,15 @@ int main()
 
     if(vHalfEraseT.count() < lHalfEraseT.count())
     {
-        std::cout << "Vector is faster.\n";
+        std::cout << "Vector is faster, by ";
+        differenceT = lHalfEraseT - vHalfEraseT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
     else
     {
-        std::cout << "List is faster.\n";
+        std::cout << "List is faster, by ";
+        differenceT = vHalfEraseT - lHalfEraseT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
 
     //Removal from One Quarter into the container:
@@ -241,11 +255,15 @@ int main()
 
     if(vQuarterEraseT.count() < lQuarterEraseT.count())
     {
-        std::cout << "Vector is faster.\n";
+        std::cout << "Vector is faster, by ";
+        differenceT = lQuarterEraseT - vQuarterEraseT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
     else
     {
-        std::cout << "List is faster.\n";
+        std::cout << "List is faster, by ";
+        differenceT = vQuarterEraseT - lQuarterEraseT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
 
     //Removal from Three Quarters into the container:
@@ -257,11 +275,15 @@ int main()
 
     if(vThreeQuarterEraseT.count() < lThreeQuarterEraseT.count())
     {
-        std::cout << "Vector is faster.\n";
+        std::cout << "Vector is faster, by ";
+        differenceT = lThreeQuarterEraseT - vThreeQuarterEraseT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
     else
     {
-        std::cout << "List is faster.\n";
+        std::cout << "List is faster, by ";
+        differenceT = vThreeQuarterEraseT - lThreeQuarterEraseT;
+        std::cout << differenceT.count() << " seconds.\n";
     }
 
     return 0;

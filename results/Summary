@@ -1,0 +1,21 @@
+When the containers have fewer than 10 M elements, then the Vector clearly 
+dominates at removal (being an order of magnitude faster at most removals
+for all containers with 1 M elements or fewer). At 10 M elements and above, 
+the Double Linked List begins to show a clear time advantage over the Vector 
+(being faster at all removals except from the back).
+
+The Double Linked List shows a clear advantage at removing elements from the
+front of the container, performing this operation at near zero time in all 
+cases. This same operation (removal from the front) is the most costly 
+operation for a Vector.
+
+The Vector and List are tied in all cases for removal from the back. (It is an 
+essentially zero time operation in both cases.)
+
+This suggests that situations where one frequently removes the front element of 
+a container (such as a FIFO queue or a buffer) or situations where the 
+container's elements are highly dynamic and the container has a very large 
+number of elements (such as YouTube comments or Tweets) a Double Linked List is 
+preferred. Situations where the back is frequently removed can safely use 
+either a Vector or a Linked List. In situations where the number of elements 
+is small or removal is unlikely, a Vector is the preffered container.

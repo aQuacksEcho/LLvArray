@@ -1,0 +1,27 @@
+Using containers with 10000000 elements.
+All times include time needed to point the iterator to the correct element.
+
+Time to remove an element from the front of the container:
+Vector: 0.096497 seconds
+List: 6e-06 seconds
+List is faster, by 0.096491 seconds.
+
+Time to remove an element from the back of the container:
+Vector: 0 seconds
+List: 0 seconds
+List is faster, by 0 seconds.
+
+Time to remove an element from the center of the container:
+Vector: 0.044576 seconds
+List: 0.033714 seconds
+List is faster, by 0.010862 seconds.
+
+Time to remove an element from the front quarter of the container:
+Vector: 0.065889 seconds
+List: 0.018262 seconds
+List is faster, by 0.047627 seconds.
+
+Time to remove an element from the back quarter of the container:
+Vector: 0.021974 seconds
+List: 0.01792 seconds
+List is faster, by 0.004054 seconds.
