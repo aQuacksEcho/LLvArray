@@ -1,0 +1,8 @@
+Repository of a program to test the time difference between using a
+Double Linked List and a Vector for removal from various locations in
+the container (Front, Back, Center, 1/4, 3/4).
+
+I ran the test multiple times using different sized containers to help 
+see how size effects the time difference.
+
+
